@@ -1,5 +1,7 @@
 import { createStore, applyMiddleware, compose } from 'redux';
+
 import reducer from './reducer';
+
 
 // import logMiddleware from './logMiddleware';
 import logMiddleware from './logMiddleware';
