@@ -1,8 +1,9 @@
 import React from 'react';
+import InputSearch from '../InputSearch';
 
 const App = () => (
     <div id="App">
-        <h1>C'est moins sexy qye ce qui était fourni hein!!!!</h1>
+        <InputSearch />
     </div>
 );
 
