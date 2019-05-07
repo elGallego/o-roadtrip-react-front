@@ -2,13 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import './index.css';
-import App from './App';
+import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
-// import du store donc du state créer dans le reducer
+// import du store qui fonctionne avec redux dans le reducer
 import store from './store';
 
+// import du css de semantic ui
+import 'semantic-ui-css/semantic.min.css';
+
 const RootComponent = () => (
+    // ici on utilise le store de redux au lieu d'utiliser le state de react car on va pouvoir le controler et passé les inflrmation plus simplement
     <Provider store={store}>
         <App />
     </Provider>
