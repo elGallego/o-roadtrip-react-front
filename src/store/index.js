@@ -1,6 +1,22 @@
-import { createStore} from 'redux';
-import reducer from './reducer';
+import { createStore, applyMiddleware, compose } from 'redux';
+import reducer from 'src/store/reducer';
 
-const store = createStore(reducer);
+// import logMiddleware from './logMiddleware';
+import logMiddleware from './logMiddleware';
+	
+const appliedMiddlewares = applyMiddleware(logMiddleware);
+
+const devTools = [];
+if (window.devToolsExtension) {
+  devTools.push(window.devToolsExtension());
+}
+
+// On se crée une variable pour "composer" avec notre propre middleware
+// et celui fourni par les devTools. Les enhancers représentent TOUS les 
+// middlewares utilisés par mon app, internes, comme externes
+
+const enhancers = compose(appliedMiddlewares, ...devTools);
+
+const store = createStore(reducer, enhancers);
 
 export default store;
