@@ -4,21 +4,30 @@ import { Form, Input } from 'semantic-ui-react';
 
 import './index.scss';
 
-const InputSearch = ( { inputText, onInputSearchChange } ) => {
+const InputSearch = ( { value, onInputSearchChange, onFormSubmit, loading } ) => {
 	const handleChange = (evt) => {
     const {value} = evt.target;
     onInputSearchChange(value);
-	}
+    
+  }
+  
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+    onFormSubmit();
+
+  }
   return (
     <div id="inputsearch">
-      <Form>
+      <Form onSubmit={handleSubmit}>
         <Form.Field>
           <Input
-            value={inputText}
+            value={value}
             onChange={handleChange}
             icon='search'
             iconPosition='left'
             placeholder='veuillez entrer votre recherche'
+            loading={loading}
+            disabled={loading}
           />
         </Form.Field>
       </Form>
@@ -27,8 +36,10 @@ const InputSearch = ( { inputText, onInputSearchChange } ) => {
 };
 
 InputSearch.propTypes = {
-  inputText: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
   handleChange: PropTypes.func.isRequired,
+  onFormSubmit: PropTypes.func.isRequired,
+  loading: PropTypes.bool.isRequired,
 }
 
 export default InputSearch;
