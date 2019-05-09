@@ -18,9 +18,9 @@ const FavDetails = () => (
       </div>
       <Card.Content extra id="rate-fav">
         <div id="rates">
-        <a>
-            <Icon name='star' size='large' className="rates"/>Nb etoiles donné par l'API
-        </a>
+          <a>
+              <Icon name='star' size='large' className="rates"/>Nb etoiles donné par l'API
+          </a>
         </div>
         <div>
           <a><Icon name='heart' size='big' className="favourite"/></a>

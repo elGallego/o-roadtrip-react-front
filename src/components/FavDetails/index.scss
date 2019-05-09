@@ -12,17 +12,24 @@
       border-top: none !important;
 
       .favourite{
+        width: 32px;
+        height: 32px;
         color:#CC0E00;
       }
       #rates{
+        width: calc(90vw - 32px);
 
         a{
+          width: 75vw;
+          height: 30px;
           .rates{
             width: 30px;
             height: 30px;
             background-color: grey;
             border-radius: 50%;
             color: #ffffff !important;
+            padding-top: 4px;
+            padding-left: 1px;
           }
         }
       }
