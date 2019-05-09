@@ -9,9 +9,11 @@
     align-items: center;
     .meta{
       width: 35vw;
+      align-self: flex-start;
+      padding-top: 17px;
     }
     #rate-fav {
-      border-top: none;
+      border-top: none !important;
       .favouriteClose {
         color: #cc0e00;
       }
