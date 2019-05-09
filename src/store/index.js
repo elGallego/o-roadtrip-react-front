@@ -4,9 +4,9 @@ import reducer from './reducer';
 
 
 // import logMiddleware from './logMiddleware';
-import logMiddleware from './logMiddleware';
+import ajaxMiddleware from './ajaxMiddleware';
 	
-const appliedMiddlewares = applyMiddleware(logMiddleware);
+const appliedMiddlewares = applyMiddleware(ajaxMiddleware);
 
 const devTools = [];
 if (window.devToolsExtension) {

@@ -1,0 +1,59 @@
+#favDetails {
+  .card {
+    width: 90vw;
+    height: 180px;
+    margin: 0 auto 10px;
+    display: flex;
+    flex-direction: column;
+    #rate-fav {
+      height: 30px;
+      display: flex;
+      justify-content: space-between;
+      border-top: none !important;
+
+      .favourite{
+        color:#CC0E00;
+      }
+      #rates{
+
+        a{
+          .rates{
+            width: 30px;
+            height: 30px;
+            background-color: grey;
+            border-radius: 50%;
+            color: #ffffff !important;
+          }
+        }
+      }
+    }
+    #presentation-fav {
+      width: 100%;
+      display: flex;
+      height: 130px;
+      .image {
+        width: 50%;
+        height: 130px;
+        img{
+          width: 100%;
+          height: 130px;
+        }
+      }
+      #presentation {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 15px;
+        .header {
+          font-family: 'Segoe UI', 'Segoe UI Web (West European)';
+          font-size: 16px;
+          font-weight: 900;
+        }
+      }
+      
+      
+    }
+
+  } 
+}

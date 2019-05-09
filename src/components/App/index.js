@@ -1,9 +1,11 @@
 import React from 'react';
-import InputSearch from '../../containers/inputSearch';
+import Map from '../Map';
+import WrapFav from '../WrapFav';
 
 const App = () => (
     <div id="App">
-        <InputSearch />
+        <Map />
+        <WrapFav />
     </div>
 );
 

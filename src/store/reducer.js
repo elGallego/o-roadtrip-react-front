@@ -6,7 +6,7 @@ const initialState = {
 
 // Types d'action que l'on va avoir besoin pour notre application
 const INPUT_SEARCH_CHANGE = 'INPUT_SEARCH_CHANGE';
-const INPUT_SEARCH_SUBMIT = 'INPUT_SEARCH_SUBMIT';
+export const INPUT_SEARCH_SUBMIT = 'INPUT_SEARCH_SUBMIT'; // Exporter car nous en avons besoin pour le middleware
 
 // le plus petit reducer que l'on peut avoir
 // le reducer est une fonction qui prend en paramètre le state et selon l'action et nous renvoi l'etat du state.
